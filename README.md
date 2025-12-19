@@ -32,22 +32,6 @@ Minimal Usage Examples
 Create chart with automatic column detection:
 
 
-obj = lollipopplot(myTable);
-Specify columns by name:
-
-
-obj = lollipopplot(myTable, ...
-    'TeamVar','Team', ...
-    'TopValueVar','GoalsA', ...
-    'SecondValueVar','GoalsB');
-Change window and axes background after creation:
-
-
-obj.Fig.Color = [0.95 0.95 0.95];    % figure window
-obj.Ax.Color  = [1 1 1];             % plotting area
-Change colors used for markers/lines:
-
-
 obj.TopColor    = [0 0.5 0.8];
 obj.SecondColor = [0.85 0.3 0.1];
 obj.FadedColor  = [0.9 0.9 0.9];
@@ -61,6 +45,7 @@ for k = 1:numel(obj.Lines)
         obj.Lines(k).Color = obj.SecondColor;
     end
 end
+
 Toggle visibility programmatically (same effect as legend click):
 
 
